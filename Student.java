@@ -2,7 +2,8 @@ import java.util.ArrayList;
 public class Student{
   boolean back;
   String name;
-  Arraylist<String> next = new Arraylist<String>;
+  Arraylist<String> nextn = new Arraylist<String>;
+  Arraylist<Student> nexts = new Arraylist<Student>;
   public Student(String n, boolean b, String...firstLast){
     name=n;
     back=b;
