@@ -178,8 +178,17 @@ public class Main {
         }
         return out;
     }
+    private void finalSense(){
+        int a=1;
+        for (int r = 0; r < seats.length; r++) {
+            for (int c = 0; c < seats[r].length; c++){
+                System.out.println(a + " " + seats[r][c].getName());
+                a++;
+            }
+        }
+    }
     public static void main(String[] args) {
-        Main m = new Main(32);
+        Main m = new Main(31);
 
         //Add students here with m.list.add(new Student(name, back, p1, p2...)).
         //Name is a string with the person's full name (first last).
@@ -189,9 +198,11 @@ public class Main {
         //and the algorithm only takes into account the people immediately next to them.
 
         String[][] result = m.sort();
-        for (String[] row : result) {
+        for (String[] row : result){
             for (String s : row) System.out.print(s + "\t");
             System.out.println();
         }
+        System.out.println();
+        m.finalSense();
     }
 }
